@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>Mobiles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="firstpage.css">
+</head>
+
+<body>
+    <div id="fullpage">
+
+
+    </div>
+
+</body>
+
+<script>
+
+    var fullpage = document.getElementById("fullpage");
+    var header = document.createElement("div");
+    header.style.width = "100%";
+    header.style.height = "10%";
+    header.style.backgroundColor = "green";
+    var remainingpage = document.createElement("div");
+    remainingpage.style.width = "100%";
+    remainingpage.style.height = "auto";
+    remainingpage.style.backgroundColor = "cyan";
+    remainingpage.style.display = "flex";
+    remainingpage.style.flexWrap = "wrap";
+    fullpage.appendChild(header);
+    fullpage.appendChild(remainingpage);
+    var headerdiv = document.createElement("div");
+    headerdiv.style.width = "100%";
+    headerdiv.style.height = "auto";
+    headerdiv.style.backgroundColor = "red";
+    headerdiv.innerHTML = "Mobiles";
+    headerdiv.style. textAlign = "center";
+    headerdiv.style.fontSize = "4rem";
+    header.appendChild(headerdiv);
+    var images = ["a.jfif", "b.jpg", "c.jfif", "d.jpg", "e.jpg", "f.jfif"];
+
+    for (var i = 0; i < 6; i++) {
+        var smallboxes = document.createElement("div");
+        smallboxes.style.width = "400px";
+        smallboxes.style.height = "300px";
+        smallboxes.style.backgroundColor = "brown";
+        smallboxes.style.marginLeft = "4%";
+        smallboxes.style.marginTop = "2%";
+        smallboxes.style.border = "1px solid black";
+        smallboxes.style.boxShadow = " 0 0 30px 0 rgba(0,0,0,0.5)";
+
+
+        var imag = document.createElement("img");
+        imag.src = images[i];
+        imag.style.backgroundSize = "contain";
+        imag.style.backgroundPostion = "center";
+        imag.style.width = "100%";
+        imag.style.height = "100%";
+        smallboxes.appendChild(imag);
+        remainingpage.appendChild(smallboxes);
+
+
+
+    }
+
+</script>
+
+
+</html>
